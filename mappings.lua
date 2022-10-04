@@ -20,7 +20,7 @@ return {
     ["<F5>"] = { "<cmd>Neotree toggle<cr>", desc = "Sort by tabs" },
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
-    ["<leader><leader>"] = { "<cmd>w!<cr>", desc = "Save" },
+    ["<leader><leader>"] = { "<cmd>w<cr>", desc = "Save" },
     ["<leader>lp"] = { "<cmd>Format<cr>", desc = "Format JS" },
     ["z"] = { "v", desc = "visual" },
     ["dk"] = { "d'k", desc = "delete to mark" },
