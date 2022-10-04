@@ -35,7 +35,7 @@ local config = {
   -- Default theme configuration
   default_theme = {
     -- set the highlight style for diagnostic messages
-    diagnostics_style = { italic = true },
+    diagnostics_style = { italic = false },
     -- Modify the color palette for the default theme
     colors = {
       fg = "#abb2bf",
@@ -68,7 +68,7 @@ local config = {
     virtual_text = true,
     underline = true,
     signs = { active = signs },
-    update_in_insert = true,
+    update_in_insert = false,
     severity_sort = true,
     float = {
       focused = false,
