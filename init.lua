@@ -86,6 +86,7 @@ local config = {
     servers = {
       -- "pyright"
       "eslint",
+      "tsserver",
     },
     -- easily add or disable built in mappings added during LSP attaching
     mappings = {

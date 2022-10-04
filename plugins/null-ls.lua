@@ -9,9 +9,9 @@ return function(config) -- overrides `require("null-ls").setup(config)`
     null_ls.builtins.formatting.prettierd,
     null_ls.builtins.formatting.stylua,
     -- Set a linter
-    -- null_ls.builtins.diagnostics.eslint,
+    -- null_ls.builtins.diagnostics.tsserver,
     -- Set code actions
-    -- null_ls.builtins.code_actions.eslint,
+    -- null_ls.builtins.code_actions.tsserver,
   }
   -- set up null-ls's on_attach function
   -- NOTE: You can remove this on attach function to disable format on save

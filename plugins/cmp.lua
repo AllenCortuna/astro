@@ -1,8 +1,13 @@
 local cmp = require "cmp"
+local luasnip = require "luasnip"
 return {
   preselect = cmp.PreselectMode.None,
   formatting = {
     fields = { "kind", "abbr", "menu" },
+    -- format = function(_, vim_item)
+    --   vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+    --   return vim_item
+    -- end,
   },
   snippet = {
     expand = function(args) luasnip.lsp_expand(args.body) end,
@@ -38,9 +43,10 @@ return {
     },
     ["<CR>"] = cmp.mapping.confirm { select = true },
     ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expandable() then
+      -- if cmp.visible() then
+      --   cmp.select_next_item()
+      -- elseif luasnip.expandable() then
+      if luasnip.expandable() then
         luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
