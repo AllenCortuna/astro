@@ -32,37 +32,6 @@ local config = {
     "██   ██ ███████    ██    ██   ██  ██████",
   },
 
-  -- Default theme configuration
-  default_theme = {
-    -- set the highlight style for diagnostic messages
-    diagnostics_style = { italic = false },
-    -- Modify the color palette for the default theme
-    colors = {
-      fg = "#abb2bf",
-      bg = "#1e222a",
-    },
-    -- enable or disable highlighting for extra plugins
-    plugins = {
-      aerial = true,
-      beacon = false,
-      bufferline = true,
-      dashboard = true,
-      highlighturl = true,
-      hop = false,
-      indent_blankline = true,
-      lightspeed = false,
-      ["neo-tree"] = true,
-      notify = true,
-      ["nvim-tree"] = false,
-      ["nvim-web-devicons"] = true,
-      rainbow = true,
-      symbols_outline = false,
-      telescope = true,
-      vimwiki = false,
-      ["which-key"] = true,
-    },
-  },
-
   -- Diagnostics configuration (for vim.diagnostics.config({...}))
   diagnostics = {
     virtual_text = true,
