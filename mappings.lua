@@ -30,6 +30,10 @@ return {
     ["c"] = { "dd", desc = "delete line " },
     ["o"] = { "o<esc>", desc = "line esc" },
     ["O"] = { "O<esc>", desc = "line esc" },
+    ["n"] = { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "./Session" },
+    ["<leader>ra"] = { "<cmd>%s///g<left><left><cr>", desc = "rename all" },
+    ["<leader>rc"] = { "<cmd>%s///gc<left><left><left><cr>", desc = "rename confirm" },
+    ["<leader>rl"] = { "<cmd>s///g<left><left><cr>", desc = "rename line" },
     ["<tab>"] = { "<cmd>Telescope find_files<cr>", desc = "line esc" },
   },
   t = {

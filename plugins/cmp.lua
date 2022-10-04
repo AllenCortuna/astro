@@ -1,16 +1,11 @@
-cmp = {
+local cmp = require "cmp"
+return {
   preselect = cmp.PreselectMode.None,
   formatting = {
     fields = { "kind", "abbr", "menu" },
-    format = function(_, vim_item)
-      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-      return vim_item
-    end,
   },
   snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
+    expand = function(args) luasnip.lsp_expand(args.body) end,
   },
   duplicates = {
     nvim_lsp = 1,
@@ -23,9 +18,7 @@ cmp = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-  },
+  -- documentation = { border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" }, },
   experimental = {
     ghost_text = false,
   },

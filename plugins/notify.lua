@@ -1,7 +1,7 @@
 return {
-	stages = "slide",
-	background_colour = "FloatShadow",
-	timeout = 2400,
+  stages = "slide",
+  background_colour = "FloatShadow",
+  timeout = 2000,
   width = 10,
 }
 
