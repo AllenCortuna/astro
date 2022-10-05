@@ -10,7 +10,10 @@ return {
   n = {
     -- disable
     ["<leader>e"] = false,
+    ["<leader>o"] = false,
+    ["<leader>d"] = false,
     ["<leader>u"] = false,
+    ["<leader>w"] = false,
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
