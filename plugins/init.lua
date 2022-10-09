@@ -4,7 +4,7 @@
 return {
   -- You can disable default plugins as follows:
   -- ["goolord/alpha-nvim"] = { disable = true },
-  ["stevearc/aerial.nvim"] = { disable = true },
+  -- ["stevearc/aerial.nvim"] = { disable = true },
   ["nvim-telescope/telescope-fzf-native.nvim"] = {disable = true},
   ['rose-pine/neovim'] = {
     config = function() require("user.plugins.rose-pine") end,

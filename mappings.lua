@@ -18,6 +18,7 @@ return {
     -- mappings seen under group name "Buffer"
     ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
     ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
+    ["<leader>c"] = { "<cmd>bd<cr>", desc = "Close" },
     ["<leader>bp"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
     ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
     ["<F5>"] = { "<cmd>Neotree toggle<cr>", desc = "Sort by tabs" },
@@ -35,8 +36,9 @@ return {
     ["c"] = { "dd", desc = "delete line " },
     ["o"] = { "o<esc>", desc = "line esc" },
     ["O"] = { "O<esc>", desc = "line esc" },
-    ["n"] = { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "./Session" },
+    ["<leader>n"] = { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "./Session" },
     ["<leader>ra"] = { ":%s///g<left><left>", desc = "rename all" },
+    ["<leader>o"] = { "<cmd>AerialToggle<cr>", desc = "Code Summary" },
     ["<leader>rc"] = { ":%s///gc<left><left><left>", desc = "rename confirm" },
     ["<leader>rl"] = { ":s///g<left><left>", desc = "rename line" },
     ["<tab>"] = { "<cmd>Telescope find_files<cr>", desc = "line esc" },

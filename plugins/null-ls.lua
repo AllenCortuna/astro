@@ -7,6 +7,7 @@ return function(config) -- overrides `require("null-ls").setup(config)`
   config.sources = {
     -- Set a formatter
     null_ls.builtins.formatting.prettierd,
+    -- null_ls.builtins.formatting.prettier,
     null_ls.builtins.formatting.stylua,
     -- Set a linter
     null_ls.builtins.diagnostics.eslint_d,

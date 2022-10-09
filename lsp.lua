@@ -5,8 +5,8 @@
 return {
     -- enable servers that you already have installed without mason
     servers = {
-      "eslint_d",
-      "tsserver",
+      -- "eslint",
+      -- "tsserver",
       -- "pyright"
     },
     -- easily add or disable built in mappings added during LSP attaching
