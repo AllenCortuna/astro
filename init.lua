@@ -4,8 +4,13 @@
 -- You can think of a Lua "table" as a dictionary like data structure the
 -- normal format is "key = value". These also handle array like data structures
 -- where a value with no key simply has an implicit numeric key
-local config = {
 
+local config = {
+  lsp = {
+    on_attach = function(client, bufnr)
+      if client.server_capabilities.documentFormattingProvider then vim.api.nvim_del_augroup_by_name "auto_format" end
+    end,
+  },
   -- Set colorscheme to use
   -- colorscheme = "default_theme",
   colorscheme = "rose-pine",
@@ -34,6 +39,21 @@ local config = {
 
   -- Configure plugins
   plugins = {
+
+    ["null-ls"] = function(config) -- overrides `require("null-ls").setup(config)`
+      -- config variable is the default configuration table for the setup functino call
+      local null_ls = require "null-ls"
+
+      -- Check supported formatters and linters
+      -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
+      -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
+      config.sources = {
+        -- Set a formatter
+        -- null_ls.builtins.formatting.stylua,
+        -- null_ls.builtins.formatting.prettier,
+      }
+      return config -- return final config table
+    end,
     -- All other entries override the require("<key>").setup({...}) call for default plugins
     packer = { -- overrides `require("packer").setup(...)`
       compile_path = vim.fn.stdpath "data" .. "/packer_compiled.lua",

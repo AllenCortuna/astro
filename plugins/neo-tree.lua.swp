@@ -11,7 +11,7 @@ return {
       indent_marker = "│",
       last_indent_marker = "└",
       highlight = "NeoTreeIndentMarker",
-        with_expanders = false,
+      with_expanders = false,
       expander_collapsed = "",
       expander_expanded = "",
       expander_highlight = "NeoTreeExpander",
@@ -111,9 +111,7 @@ return {
     {
       event = "vim_buffer_enter",
       handler = function(_)
-        if vim.bo.filetype == "neo-tree" then
-          vim.wo.signcolumn = "auto"
-        end
+        if vim.bo.filetype == "neo-tree" then vim.wo.signcolumn = "auto" end
       end,
     },
   },

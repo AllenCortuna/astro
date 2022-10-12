@@ -6,7 +6,7 @@ return function(config) -- overrides `require("null-ls").setup(config)`
   -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
   config.sources = {
     -- Set a formatter
-    null_ls.builtins.formatting.prettierd,
+    -- null_ls.builtins.formatting.prettierd,
     -- null_ls.builtins.formatting.prettier,
     null_ls.builtins.formatting.stylua,
     -- Set a linter
@@ -14,16 +14,19 @@ return function(config) -- overrides `require("null-ls").setup(config)`
     -- Set code actions
     null_ls.builtins.code_actions.eslint_d,
   }
-  -- set up null-ls's on_attach function
-  -- NOTE: You can remove this on attach function to disable format on save
+
+  -- null-ls.lua those are commented out
+  -- NOTE: from v2 format on save is default setting
   -- config.on_attach = function(client)
-  --   if client.resolved_capabilities.document_formatting then
+  --   if client.server_capabilities.documentFormattingProvider then
   --     vim.api.nvim_create_autocmd("BufWritePre", {
   --       desc = "Auto format before save",
   --       pattern = "<buffer>",
-  --       callback = vim.lsp.buf.formatting_sync,
+  --       callback = vim.lsp.buf.format,
   --     })
   --   end
   -- end
+  --
+  -- set up null-ls's on_attach function
   return config -- return final config table to use in require("null-ls").setup(config)
 end

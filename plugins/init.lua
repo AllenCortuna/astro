@@ -1,14 +1,15 @@
-
-
-
 return {
   -- You can disable default plugins as follows:
   -- ["goolord/alpha-nvim"] = { disable = true },
   -- ["stevearc/aerial.nvim"] = { disable = true },
-  ["nvim-telescope/telescope-fzf-native.nvim"] = {disable = true},
-  ['rose-pine/neovim'] = {
-    config = function() require("user.plugins.rose-pine") end,
-  }
+  ["nvim-telescope/telescope-fzf-native.nvim"] = { disable = true },
+  -- ["rebelot/heirline.nvim"] = { disable = true },
+  ["rose-pine/neovim"] = {
+    config = function() require "user.plugins.rose-pine" end,
+  },
+  -- ["glepnir/galaxyline.nvim"] = {
+  --   config = function() require "user.plugins.galaxyline" end,
+  -- },
 
   -- You can also add new plugins here as well:
   -- Add plugins, the packer syntax without the "use"
@@ -18,6 +19,6 @@ return {
   --   event = "BufRead",
   --   config = function() require("lsp_signature").setup() end,
   -- },
-  -- ["EdenEast/nightfox.nvim"] = require "user.plugins.nightfox",
+  -- ["EdenEast/nightfox.nvim"] = require "user.plugins.nightfox,
   -- ["null-ls"] = require "user.plugins.null-ls",
 }
