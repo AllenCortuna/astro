@@ -1,16 +1,10 @@
 --              AstroNvim Configuration Table
 -- All configuration changes should go inside of the table below
-
 -- You can think of a Lua "table" as a dictionary like data structure the
 -- normal format is "key = value". These also handle array like data structures
 -- where a value with no key simply has an implicit numeric key
 
 local config = {
-  lsp = {
-    on_attach = function(client, bufnr)
-      if client.server_capabilities.documentFormattingProvider then vim.api.nvim_del_augroup_by_name "auto_format" end
-    end,
-  },
   -- Set colorscheme to use
   -- colorscheme = "default_theme",
   colorscheme = "rose-pine",
@@ -84,11 +78,24 @@ local config = {
       path = 250,
     },
   },
+  lsp = {
 
+    formatting = {
+      format_on_save = false, -- enable or disable auto formatting on save
+      disabled = { -- disable formatting capabilities for the listed clients
+        "sumneko_lua",
+        "null_ls",
+        "tsserver",
+      },
+      -- filter = function(client) -- fully override the default formatting function
+      --   return true
+      -- end
+    },
+  },
   -- Modify which-key registration (Use this with mappings table in the above.)
   ["which-key"] = {
     -- Add bindings which show up as group name
-    register_mappings = {
+    register = {
       -- first key is the mode, n == normal mode
       n = {
         -- second key is the prefix, <leader> prefixes

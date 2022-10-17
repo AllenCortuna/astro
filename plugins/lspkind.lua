@@ -21,7 +21,7 @@ return {
 
 		Text = "", --
 		Method = "", --
-		Function = "", --
+		Function = "", --
 		Constructor = "",
 		Field = "",
 		Variable = "",
@@ -39,7 +39,7 @@ return {
 		Reference = "",
 		Folder = "",
 		EnumMember = "",
-		Constant = "",
+		Constant = "", --
 		Struct = "פּ",
 		Event = "", --
 		Operator = "",
