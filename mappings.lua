@@ -16,6 +16,7 @@ return {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    ["<leader>ba"] = { "<cmd>%bdelete<cr>", desc = "Close all" },
     ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
     ["<leader>c"] = { "<cmd>bd<cr>", desc = "Close" },
     ["<leader>bp"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
@@ -24,7 +25,6 @@ return {
     -- quick save
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
     ["<leader><leader>"] = { "<cmd>w<cr>", desc = "Save" },
-    ["<leader>lp"] = { "<cmd>Format<cr>", desc = "Format JS" },
     ["z"] = { "v", desc = "visual" },
     ["dk"] = { "d'k", desc = "delete to mark" },
     ["yk"] = { "y'k", desc = "yank to mark" },
