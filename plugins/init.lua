@@ -1,12 +1,19 @@
 return {
   -- You can disable default plugins as follows:
   -- ["goolord/alpha-nvim"] = { disable = true },
-  -- ["stevearc/aerial.nvim"] = { disable = true },
+  ["stevearc/aerial.nvim"] = { disable = true },
   -- ["nvim-neo-tree/neo-tree.nvim"] = {disable=true},
+
+  ["mrjones2014/smart-splits.nvim"] = { disable = true },
   ["nvim-telescope/telescope-fzf-native.nvim"] = { disable = true },
+  ["b0o/SchemaStore.nvim"] = { disable = true },
   -- ["rebelot/heirline.nvim"] = { disable = true },
   ["rose-pine/neovim"] = {
     config = function() require "user.plugins.rose-pine" end,
+  },
+  ["folke/todo-comments.nvim"] = {
+    requires = "nvim-lua/plenary.nvim",
+    config = function() require "user.plugins.todo" end,
   },
   -- ["glepnir/galaxyline.nvim"] = {
   --   config = function() require "user.plugins.galaxyline" end,
@@ -21,5 +28,4 @@ return {
   --   config = function() require("lsp_signature").setup() end,
   -- },
   -- ["EdenEast/nightfox.nvim"] = require "user.plugins.nightfox,
-  -- ["null-ls"] = require "user.plugins.null-ls",
 }

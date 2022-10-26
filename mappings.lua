@@ -33,14 +33,15 @@ return {
     ["<k"] = { "<'k", desc = "format to mark" },
     [">k"] = { ">'k", desc = "format to mark" },
     ["c"] = { "dd", desc = "delete line " },
-    -- ["o"] = { "o<esc>", desc = "line esc" },
-    -- ["O"] = { "O<esc>", desc = "line esc" },
+    ["o"] = { "ojk", desc = "line esc" },
+    ["O"] = { "Ojk", desc = "line esc" },
     ["<leader>n"] = { "<cmd>SessionManager! load_current_dir_session<cr>", desc = "./Session" },
     ["<leader>ra"] = { ":%s///g<left><left>", desc = "rename all" },
     ["<leader>o"] = { "<cmd>AerialToggle<cr>", desc = "Code Summary" },
     ["<leader>rc"] = { ":%s///gc<left><left><left>", desc = "rename confirm" },
     ["<leader>rl"] = { ":s///g<left><left>", desc = "rename line" },
     ["<tab>"] = { "<cmd>Telescope find_files<cr>", desc = "line esc" },
+    ["<leader>ft"] = { "<cmd>TodoTelescope<cr>", desc = "TodoTelescope" },
   },
   t = {
     -- setting a mapping to false will disable it
