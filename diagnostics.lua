@@ -1,4 +1,3 @@
---
   -- Diagnostics configuration (for vim.diagnostics.config({...}))
   -- diagnostics = {
   return {
