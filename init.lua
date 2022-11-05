@@ -82,9 +82,17 @@ local config = {
 
     formatting = {
       format_on_save = false, -- enable or disable auto formatting on save
-      -- filter = function(client) -- fully override the default formatting function
-      --   return true
-      -- end
+      async = true,
+      filter = function(client) -- fully override the default formatting function
+        if client.name == "tsserver" then
+          return false
+        end
+        if client.name == "eslint_d" then
+          return false
+        end
+        return true
+      end
+
     },
   },
   -- Modify which-key registration (Use this with mappings table in the above.)

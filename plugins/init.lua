@@ -3,6 +3,7 @@ return {
   -- ["goolord/alpha-nvim"] = { disable = true },
   -- ["nvim-neo-tree/neo-tree.nvim"] = {disable=true},
   -- ["rebelot/heirline.nvim"] = { disable = true },
+  -- ["rebelot/notify.vim"] = { disable = true },
   ["stevearc/aerial.nvim"] = { disable = true },
 
   ["mrjones2014/smart-splits.nvim"] = { disable = true },
@@ -11,10 +12,10 @@ return {
   ["rose-pine/neovim"] = {
     config = function() require "user.plugins.rose-pine" end,
   },
-  ["folke/todo-comments.nvim"] = {
-    requires = "nvim-lua/plenary.nvim",
-    config = function() require "user.plugins.todo" end,
-  },
+  -- ["folke/todo-comments.nvim"] = {
+  --   requires = "nvim-lua/plenary.nvim",
+  --   config = function() require "user.plugins.todo" end,
+  -- },
 
   -- You can also add new plugins here as well:
   -- Add plugins, the packer syntax without the "use"
