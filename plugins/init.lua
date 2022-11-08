@@ -1,11 +1,9 @@
 return {
   -- You can disable default plugins as follows:
   -- ["goolord/alpha-nvim"] = { disable = true },
-  -- ["nvim-neo-tree/neo-tree.nvim"] = {disable=true},
-  -- ["rebelot/heirline.nvim"] = { disable = true },
-  -- ["rebelot/notify.vim"] = { disable = true },
+  ["rcarriga/nvim-notify"] = {disable = true },
   ["stevearc/aerial.nvim"] = { disable = true },
-
+  ["famiu/bufdelete.nvim"] = {module = "bufdelete", cmd = { "Bdelete", "Bwipeout" } },
   ["mrjones2014/smart-splits.nvim"] = { disable = true },
   ["nvim-telescope/telescope-fzf-native.nvim"] = { disable = true },
   ["b0o/SchemaStore.nvim"] = { disable = true },

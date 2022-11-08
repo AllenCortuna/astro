@@ -13,6 +13,7 @@ return {
     ["<leader>o"] = false,
     ["<leader>d"] = false,
     ["<leader>w"] = false,
+    ["<leader>C"] = false,
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
