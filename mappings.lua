@@ -17,7 +17,7 @@ return {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bb"] = { "<cmd>tabnew<cr>", desc = "New tab" },
-    ["<leader>ba"] = { "<cmd>%bdelete<cr>", desc = "Close all" },
+    ["<leader>ba"] = { "<cmd>Bwipeout<cr>", desc = "Close all" },
     ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
     ["<leader>c"] = { "<cmd>bd<cr>", desc = "Close" },
     ["<leader>bp"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },

@@ -2,7 +2,7 @@ return {
   -- You can disable default plugins as follows:
   -- ["goolord/alpha-nvim"] = { disable = true },
   ["rcarriga/nvim-notify"] = {disable = true },
-  ["stevearc/aerial.nvim"] = { disable = true },
+  -- ["stevearc/aerial.nvim"] = { disable = true },
   ["famiu/bufdelete.nvim"] = {module = "bufdelete", cmd = { "Bdelete", "Bwipeout" } },
   ["mrjones2014/smart-splits.nvim"] = { disable = true },
   ["nvim-telescope/telescope-fzf-native.nvim"] = { disable = true },
