@@ -27,6 +27,7 @@ return {
     ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
     ["<leader><leader>"] = { "<cmd>w<cr>", desc = "Save" },
     ["z"] = { "v", desc = "visual" },
+    ["<f4>"] = { "<cmd>bd<cr>", desc = "close file" },
     ["dk"] = { "d'k", desc = "delete to mark" },
     ["yk"] = { "y'k", desc = "yank to mark" },
     ["zk"] = { "v'k", desc = "select to mark" },
